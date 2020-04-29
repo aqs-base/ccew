@@ -1,10 +1,10 @@
 const { EventEmitter } = require("events");
 const winston = require("winston");
-const Ticker = require("../../type/ticker");
-const Trade = require("../../type/trade");
-const Level2Point = require("../../type/level2-point");
-const Level2Update = require("../../type/level2-update");
-const Level2Snapshot = require("../../type/level2-snapshot");
+const Ticker = require("../../types/ticker");
+const Trade = require("../../types/trade");
+const Level2Point = require("../../types/level2-point");
+const Level2Update = require("../../types/level2-update");
+const Level2Snapshot = require("../../types/level2-snapshot");
 const SmartWss = require("../../smart-wss");
 const Watcher = require("../../watcher");
 
@@ -125,7 +125,7 @@ class BinanceClient extends EventEmitter {
       let streams = [].concat(
         Array.from(this._tradeSubs.keys()).map(p => p + "@aggTrade"),
         Array.from(this._level2SnapshotSubs.keys()).map(p => p + "@depth20"),
-        Array.from(this._level2UpdateSubs.keys()).map(p => p + "@depth")
+        Array.from(this._level2UpdateSubs.keys()).map(p => p + "@depth"),
       );
       if (this._tickerSubs.size > 0) {
         streams.push("!ticker@arr");

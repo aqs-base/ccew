@@ -1,12 +1,12 @@
 const BasicClient = require("../../basic-client");
-const Ticker = require("../../type/ticker");
-const Trade = require("../../type/trade");
-const Level2Point = require("../../type/level2-point");
-const Level2Snapshot = require("../../type/level2-snapshot");
-const Level2Update = require("../../type/level2-update");
-const Level3Point = require("../../type/level3-point");
-const Level3Snapshot = require("../../type/level3-snapshot");
-const Level3Update = require("../../type/level3-update");
+const Ticker = require("../../types/ticker");
+const Trade = require("../../types/trade");
+const Level2Point = require("../../types/level2-point");
+const Level2Snapshot = require("../../types/level2-snapshot");
+const Level2Update = require("../../types/level2-update");
+const Level3Point = require("../../types/level3-point");
+const Level3Snapshot = require("../../types/level3-snapshot");
+const Level3Update = require("../../types/level3-update");
 
 class BitfinexClient extends BasicClient {
   constructor() {

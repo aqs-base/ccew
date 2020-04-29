@@ -1,10 +1,10 @@
 const BasicClient = require("../../basic-client");
 const zlib = require("zlib");
 const winston = require("winston");
-const Ticker = require("../../type/ticker");
-const Trade = require("../../type/trade");
-const Level2Point = require("../../type/level2-point");
-const Level2Snapshot = require("../../type/level2-snapshot");
+const Ticker = require("../../types/ticker");
+const Trade = require("../../types/trade");
+const Level2Point = require("../../types/level2-point");
+const Level2Snapshot = require("../../types/level2-snapshot");
 
 class HuobiClient extends BasicClient {
   constructor() {
